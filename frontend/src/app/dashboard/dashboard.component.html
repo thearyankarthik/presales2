@@ -1,0 +1,95 @@
+<div class="crm-dashboard">
+  <!-- SIDENAV -->
+  
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+    <!-- DASHBOARD LEFT -->
+    <section class="dashboard-section">
+      <div class="greeting-card">
+        <div>
+          <h2>Good afternoon, Sashi!</h2>
+          <p>SUBMIT ACTIVITY IS MUST FOR EVERY SITE VISIT AND OFFICE VISIT</p>
+        </div>
+        <img src="assets/dashboard-illustration.png" alt="Team Illustration" />
+      </div>
+
+      <div class="stats-grid">
+        <div class="card orange">
+          <h4>TOTAL CUSTOMERS</h4>
+          <h1>15822</h1>
+          <p>New Leads In This Month</p>
+        </div>
+        <div class="card green">
+          <h4>ACTIVE CUSTOMERS</h4>
+          <h1>15797</h1>
+          <p>Active Leads In This Month</p>
+        </div>
+        <div class="card purple">
+          <h4>NOT ACTIVE</h4>
+          <h1>25</h1>
+          <p>Not Active Leads In This Month</p>
+        </div>
+        <div class="card blue">
+          <h4>ACTIVE % CUSTOMERS</h4>
+          <h1>99.84%</h1>
+          <p>Active Leads % This Month</p>
+        </div>
+        <div class="card pink">
+          <h4>PENDING CUSTOMERS</h4>
+          <h1>76</h1>
+          <p>Pending Leads This Month</p>
+        </div>
+        <div class="card red">
+          <h4>PENDING % CUSTOMERS</h4>
+          <h1>45%</h1>
+          <p>Pending Leads % This Month</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEADS RIGHT -->
+    <section class="leads-section">
+      <div class="tabs">
+        <button class="tab active">New Leads</button>
+        <button class="tab">Upcoming Site Visits</button>
+        <button class="tab">Site Visit Done</button>
+        <button class="tab">Expected Deal</button>
+        <button class="tab">Re-Engage</button>
+      </div>
+
+      <div class="table-actions">
+        <button class="action-btn">🔔 New Enquiries</button>
+        <button class="action-btn">📅 Today Leads</button>
+        <button class="action-btn">📞 IVR Leads</button>
+      </div>
+
+      <div class="leads-table-container">
+        <table class="leads-table">
+          <thead>
+            <tr>
+              <th>Customers</th>
+              <th>Mobile</th>
+              <th>Source</th>
+              <th>Project</th>
+              <th>Activity</th>
+              <th>Scheduled</th>
+              <th>Employee</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let lead of leads">
+              <td>{{ lead.customer }}</td>
+              <td>{{ lead.mobile }}</td>
+              <td>{{ lead.source }}</td>
+              <td>{{ lead.project }}</td>
+              <td>{{ lead.activity }}</td>
+              <td>{{ lead.scheduled }}</td>
+              <td>{{ lead.employee }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
