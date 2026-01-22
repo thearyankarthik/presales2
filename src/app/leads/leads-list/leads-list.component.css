@@ -1,0 +1,173 @@
+.leads-list-container {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.leads-list-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 600;
+  color: #3f51b5;/* Material Green for Leads */
+}
+
+.leads-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.leads-table th,
+.leads-table td {
+  padding: 14px 18px;
+  text-align: left;
+  font-size: 15px;
+}
+
+.leads-table thead {
+  background-color: #3f51b5   !important; /* Lead Green */
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.leads-table tbody tr {
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.leads-table tbody tr:nth-child(even) {
+  background-color: #f2f6fc;
+}
+
+.leads-table tbody tr:hover {
+  background-color: #e8f5e9;
+  transform: scale(1.01);
+}
+
+/* Status styles (optional if you show lead status) */
+.leads-table td span.active {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 600;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.leads-table td span.inactive {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #ffebee;
+  color: #d32f2f;
+  font-weight: 600;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* Search bar */
+.search-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px 15px;
+  width: 260px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.action-buttons button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn {
+  background: #2196f3;
+  color: #fff;
+}
+
+.delete-btn {
+  background: #f44336;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background: #1976d2;
+}
+
+.delete-btn:hover {
+  background: #d32f2f;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+  .leads-list-container {
+    padding: 20px;
+  }
+
+  .leads-table th,
+  .leads-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .leads-list-container h2 {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .leads-list-container {
+    padding: 15px;
+  }
+
+  .leads-table th,
+  .leads-table td {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .leads-list-container h2 {
+    font-size: 22px;
+  }
+
+  .leads-table td span.active,
+  .leads-table td span.inactive {
+    padding: 3px 8px;
+    font-size: 12px;
+  }
+}
