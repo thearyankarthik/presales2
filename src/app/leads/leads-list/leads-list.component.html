@@ -1,0 +1,46 @@
+<div class="leads-list-container">
+  <div class="header">
+    <h2>Leads List</h2>
+    <button class="add-btn" (click)="goToCreate()">+ Add Lead</button>
+  </div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input
+      type="text"
+      placeholder="Search by name or phone..."
+      [(ngModel)]="filterText"
+    />
+    <button *ngIf="filterText" class="clear-btn" (click)="filterText=''">✕</button>
+  </div>
+
+  <!-- Table -->
+  <table class="leads-table">
+    <thead>
+      <tr>
+        <th>Lead ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Project</th>
+        <th>Source</th>
+        <th>Assigned To</th>
+        <th style="text-align:center;">Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let lead of leads | filterBy: filterText">
+        <td>{{ lead.id }}</td>
+        <td>{{ lead.name }}</td>
+        <td>{{ lead.phone }}</td>
+        <td>{{ lead.project }}</td>
+        <td>{{ lead.source }}</td>
+        <td>{{ lead.assignedTo }}</td>
+        <td style="text-align:center;" class="action-buttons">
+          <button class="edit-btn" (click)="edit(lead)">Edit</button>
+          <button class="delete-btn" (click)="delete(lead)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
