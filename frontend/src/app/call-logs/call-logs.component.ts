@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { CallLogsService } from '../services/call-logs.service';
 
 export interface CallLog {
-  user: string;
-  phone: string;
-  type: string;
-  status: string;
-  duration: string;
-  time: string;
-  notes: string;
+  userName: string;
+  leadName: string;
+  phoneNumber: string;
+  callType: string;
+  callStatus: string;
+  callDuration: string;
+  callTime: string;
+  remarks: string;
 }
 
 @Component({
@@ -16,40 +18,31 @@ export interface CallLog {
   templateUrl: './call-logs.component.html',
   styleUrls: ['./call-logs.component.css']
 })
-export class CallLogsComponent {
+export class CallLogsComponent implements OnInit {
 
-  displayedColumns: string[] = [
-  'userName',
-  'leadName',
-  'phoneNumber',
-  'callType',
-  'callStatus',
-  'callDuration',
-  'callTime',
-  'remarks'
+  displayedColumns = [
+    'userName',
+    'leadName',
+    'phoneNumber',
+    'callType',
+    'callStatus',
+    'callDuration',
+    'callTime',
+    'remarks'
   ];
-  dataSource = new MatTableDataSource([
-  {
-    userName: 'Sashi',
-    leadName: 'Ramesh Kumar',
-    phoneNumber: '9876543210',
-    callType: 'Outgoing',
-    callStatus: 'Answered',
-    callDuration: '3m 24s',
-    callTime: '22-01-2026 14:10',
-    remarks: 'Interested in site visit'
-  },
-  {
-    userName: 'Prashanth',
-    leadName: 'Anita Sharma',
-    phoneNumber: '9123456789',
-    callType: 'Incoming',
-    callStatus: 'Missed',
-    callDuration: '-',
-    callTime: '22-01-2026 13:45',
-    remarks: 'Follow up required'
+
+  dataSource = new MatTableDataSource<CallLog>([]);
+
+  constructor(private callLogsService: CallLogsService) {}
+
+  ngOnInit(): void {
+    this.callLogsService.getCallLogs().subscribe({
+      next: (data: CallLog[]) => {
+        this.dataSource.data = data;
+      },
+      error: (err: any) => {
+        console.error(err);
+      }
+    });
   }
-]);
-
-
 }
