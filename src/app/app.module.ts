@@ -44,7 +44,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { TabViewModule } from 'primeng/tabview';
 import { RegistrationComponent } from './registration/registration.component';
-import { UsersListComponent } from './users-list/users-list.component';
+import { UsersListEmpComponent } from './users-list-emp/users-list-emp.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { ConfigureComponent } from './configure/configure.component';
@@ -58,7 +58,7 @@ import { ProjectsComponent } from './projects/projects.component';
   declarations: [
     AppComponent,
     RegistrationComponent,
-    UsersListComponent,
+    UsersListEmpComponent,
     DashboardComponent,
 
     ConfigureComponent,
