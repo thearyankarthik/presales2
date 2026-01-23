@@ -1,6 +1,6 @@
 // users-list-emp.component.ts
 import { Component, OnInit } from '@angular/core';
-import { RegistrationService } from '../services/registration.service';
+import { RegistrationService } from '../../services/registration.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
@@ -15,7 +15,7 @@ export class UsersListEmpComponent implements OnInit {
   constructor(
     private regService: RegistrationService,
     private toastr: ToastrService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.regService.getUsers().subscribe({
