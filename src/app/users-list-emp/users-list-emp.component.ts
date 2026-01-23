@@ -1,14 +1,14 @@
-// users-list.component.ts
+// users-list-emp.component.ts
 import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../services/registration.service';
 import { ToastrService } from 'ngx-toastr';
 
 @Component({
-  selector: 'app-users-list',
-  templateUrl: './users-list.component.html',
-  styleUrls: ['./users-list.component.css'],
+  selector: 'app-users-list-emp',
+  templateUrl: './users-list-emp.component.html',
+  styleUrls: ['./users-list-emp.component.css'],
 })
-export class UsersListComponent implements OnInit {
+export class UsersListEmpComponent implements OnInit {
   users: any[] = [];
   loading = true;
 

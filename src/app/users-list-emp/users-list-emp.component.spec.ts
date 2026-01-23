@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsersListComponent } from './users-list.component';
+import { UsersListEmpComponent } from './users-list-emp.component';
 
 describe('UsersListComponent', () => {
-  let component: UsersListComponent;
-  let fixture: ComponentFixture<UsersListComponent>;
+  let component: UsersListEmpComponent;
+  let fixture: ComponentFixture<UsersListEmpComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [UsersListComponent]
+      declarations: [UsersListEmpComponent]
     });
-    fixture = TestBed.createComponent(UsersListComponent);
+    fixture = TestBed.createComponent(UsersListEmpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
