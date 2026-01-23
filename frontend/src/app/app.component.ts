@@ -40,6 +40,7 @@ export class AppComponent implements OnInit, OnDestroy {
     { label: 'Leads', icon: 'list', route: '/leads' },
     { label: 'Users', icon: 'people', route: '/users-list' },
     { label: 'Project', icon: 'assignment', route: '/projects' },
+    { label: 'Call Logs', icon: 'call', route: '/call-logs' },
   ];
 
   constructor(private router: Router, private toastr: ToastrService) { }

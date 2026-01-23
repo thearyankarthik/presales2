@@ -9,6 +9,7 @@ import { ConfigureComponent } from './configure/configure.component';
 import { LeadsListComponent } from './leads/leads-list/leads-list.component';
 import { LeadCreateComponent } from './leads/lead-create/lead-create.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { CallLogsComponent } from './call-logs/call-logs.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'leads', component: LeadsListComponent },
   { path: 'leads/create', component: LeadCreateComponent },
   { path: 'projects', component: ProjectsComponent },
+  { path: 'call-logs', component: CallLogsComponent },
 ];
 
 @NgModule({

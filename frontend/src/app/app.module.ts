@@ -53,6 +53,7 @@ import { LeadsListComponent } from './leads/leads-list/leads-list.component';
 import { LeadCreateComponent } from './leads/lead-create/lead-create.component';
 import { FilterByPipe } from './pipes/filter-by.pipe';
 import { ProjectsComponent } from './projects/projects.component';
+import { CallLogsComponent } from './call-logs/call-logs.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { ProjectsComponent } from './projects/projects.component';
     LeadCreateComponent,
     FilterByPipe,
     ProjectsComponent,
+    CallLogsComponent,
   ],
   imports: [
     BrowserModule,
