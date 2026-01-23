@@ -8,15 +8,7 @@
       <span class="app-title">Pre-Sales CRM</span>
       <span class="spacer"></span>
 
-      <div class="search-container" style="display: flex;">
-        <mat-form-field appearance="outline" class="search-bar">
-          <mat-label>Search</mat-label>
-          <input matInput type="text" />
-          <button mat-icon-button matSuffix>
-            <mat-icon>search</mat-icon>
-          </button>
-        </mat-form-field>
-      </div>
+      <!-- Search removed as per requirement -->
 
       <span class="spacer"></span>
 
@@ -42,12 +34,8 @@
       <mat-icon class="icon">account_circle</mat-icon>
 
       <!-- ✅ Profile & Logout only shown when username is present -->
-      <div
-        *ngIf="username"
-        class="profile-container"
-        (mouseenter)="showLogout = true"
-        (mouseleave)="showLogout = false"
-      >
+      <div *ngIf="username" class="profile-container" (mouseenter)="showLogout = true"
+        (mouseleave)="showLogout = false">
         <div class="profile-section">
           <span class="profile-text">{{ username }}</span>
           <img src="assets/profile.avif" alt="Profile" class="imageprofile" />
@@ -68,13 +56,8 @@
     <mat-sidenav-container class="sidenav-container">
       <mat-sidenav #sidenav [mode]="isDesktop ? 'side' : 'over'" [opened]="isDesktop" class="sidenav">
         <mat-nav-list class="sidebarbg">
-          <mat-list-item 
-            *ngFor="let item of menuItems" 
-            [routerLink]="item.route" 
-            (click)="selectItem(item.label)"
-            [ngClass]="{'active-item': selectedItem === item.label}"
-            class="menu-item-wrapper"
-          >
+          <mat-list-item *ngFor="let item of menuItems" [routerLink]="item.route" (click)="selectItem(item.label)"
+            [ngClass]="{'active-item': selectedItem === item.label}" class="menu-item-wrapper">
             <div class="menu-item-content">
               <mat-icon class="menu-icon">{{ item.icon }}</mat-icon>
               <span class="menu-label">{{ item.label }}</span>

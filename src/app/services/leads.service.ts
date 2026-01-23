@@ -10,7 +10,10 @@ export class LeadsService {
   // replace with your backend base url later
   private baseUrl = 'http://localhost:8000/api/leads';
 
-  constructor(private http: HttpClient) {}
+  // State for UI persistence
+  public filterViewOpen = false;
+
+  constructor(private http: HttpClient) { }
 
   getAll(): Observable<Lead[]> {
     // switch to: return this.http.get<Lead[]>(this.baseUrl);

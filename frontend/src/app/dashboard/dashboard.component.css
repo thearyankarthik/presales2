@@ -53,31 +53,26 @@
 .content {
   flex: 1;
   display: flex;
-  padding: 20px;
-  gap: 20px;
+  padding: 0;
+  gap: 0;
   overflow: hidden;
+  width: 100%;
 }
 
 /* LEFT SECTION */
 .dashboard-section {
-  flex: 0.55;
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0;
   overflow: hidden;
+  padding: 20px;
+  width: 100%;
 }
 
 /* RIGHT SECTION */
 .leads-section {
-  flex: 0.45;
-  background: #fff;
-  border-radius: 14px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: flex;
-  flex-direction: column;
-  height: calc(100vh - 40px);
-  overflow: hidden;
+  display: none;
 }
 
 /* GREETING */
@@ -99,15 +94,17 @@
 /* CARDS */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
+  margin-top: 20px;
 }
 
 .card {
-  color: #fff;
+  color: #000;
   padding: 18px;
   border-radius: 14px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background: #f5f6fa !important;
 }
 
 .orange { background: linear-gradient(135deg, #ff9800, #f57c00); }
