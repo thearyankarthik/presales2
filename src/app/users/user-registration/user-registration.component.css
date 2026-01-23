@@ -1,0 +1,10 @@
+.registration-container {
+    padding: 20px;
+}
+
+.form-placeholder {
+    margin-top: 20px;
+    padding: 40px;
+    border: 1px dashed #ccc;
+    text-align: center;
+}

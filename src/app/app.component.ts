@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, OnDestroy {
   private allMenuItems = [
     { label: 'Dashboard', icon: 'dashboard', route: '/dashboard' },
     { label: 'Leads', icon: 'list', route: '/leads' },
-    { label: 'Users', icon: 'people', route: '/users-list' },
+    { label: 'Users', icon: 'people', route: '/users' },
     { label: 'Project', icon: 'assignment', route: '/projects' },
   ];
 
